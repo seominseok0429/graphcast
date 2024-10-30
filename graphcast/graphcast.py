@@ -21,7 +21,7 @@ It uses ideas similar to those in Keisler (2022):
 Reference:
   https://arxiv.org/pdf/2202.07575.pdf
 
-It assumes data across time and level is stacked, and operates only operates in
+It assumes data across  and level is stacked, and operates only operates in
 a 2D mesh over latitudes and longitudes.
 """
 
