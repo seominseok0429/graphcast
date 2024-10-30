@@ -777,7 +777,7 @@ class GraphCast(predictor_base.Predictor):
     grid_xarray = model_utils.restore_leading_axes(grid_xarray_lat_lon_leading)
 
     # xarray `DataArray` (batch, lat, lon, channels)
-    # to xarray `Dataset` (batch, one time step, lat, lon, level, multiple vars)
+    # to xarray `Dataset` (batch, one - step, lat, lon, level, multiple vars)
     return model_utils.stacked_to_dataset(
         grid_xarray.variable, targets_template)
 
