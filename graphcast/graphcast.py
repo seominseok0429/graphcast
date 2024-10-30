@@ -742,8 +742,7 @@ class GraphCast(predictor_base.Predictor):
       ) -> chex.Array:
     """xarrays -> [num_grid_nodes, batch, num_channels]."""
 
-    # xarray `Dataset` (batch, time, lat, lon, level, multiple vars)
-    # to xarray `DataArray` (batch, lat, lon, channels)
+    #  xarray `DataArray` (batch, lat, lon, channels)
     stacked_inputs = model_utils.dataset_to_stacked(inputs)
     stacked_forcings = model_utils.dataset_to_stacked(forcings)
     stacked_inputs = xarray.concat(
